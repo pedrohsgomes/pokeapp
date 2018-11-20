@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration>
+	<!-- Appenders -->
+	<Appenders>
+		<Console name="STDOUT" target="SYSTEM_OUT">
+			<PatternLayout pattern="%-5p: %c - %m%n" />
+		</Console>
+	</Appenders>
+
+	<Loggers>	
+		<logger name="org.hsqldb">
+			<level value="debug" />
+		</logger>
+	
+		<!-- Application Loggers -->
+		<logger name="com.mycompany.myproject">
+			<level value="info" />
+		</logger>
+	
+		<!-- 3rdparty Loggers -->
+		<logger name="org.springframework.core">
+			<level value="warn" />
+		</logger>
+	
+		<logger name="org.springframework.beans">
+			<level value="debug" />
+		</logger>
+	
+		<logger name="org.springframework.context">
+			<level value="debug" />
+		</logger>
+	
+		<logger name="org.springframework.web">
+			<level value="info" />
+		</logger>
+	
+		<logger name="org.springframework.security">
+			<level value="debug" />
+		</logger>
+	
+		<!-- Root Logger -->
+		<root level="debug">
+			<appender-ref ref="STDOUT" />
+		</root>
+	</Loggers>
+</Configuration>
